@@ -31,7 +31,7 @@ export const applyArtEffect = (styleId, imageBase64Encoded, imageSize, partnerId
 }
 
 export const getSubmissionStatus = (submissionId) => {
-    return axios.get(`${API_ENDPOINT}/results?submissionId=${submissionId}`, {
+    return axios.get(`${API_ENDPOINT}/result?submissionId=${submissionId}`, {
         headers:{
             'x-api-key': API_KEY
         }

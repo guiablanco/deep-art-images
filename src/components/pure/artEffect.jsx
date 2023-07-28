@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from 'react';
 import { getStyles, applyArtEffect, getSubmissionStatus } from '@/models/api-use';
 
+//style
+import '../../styles/index.css'
+
 const ArtEffects = () => {
 
     const [selectedFile, setSelectedFile] = useState(null);
@@ -86,20 +89,27 @@ const ArtEffects = () => {
 
     return (
         <div className='art-effects-container'>
+            <h2>Aplica efecto artírtico a </h2>
+            <h2 className='base-title'>tus fotos usando esta IA </h2>
             <input type='file' onChange={handleFileChange} />
+            <div className='image-container'>
+
+            </div>
             <br/>
             <select value={selectedArtStyle} onChange={handleStyleChange} >
-                {artStyles.map((style) => {
+                {artStyles.map((style) => (
                     <option key={style.id} value={style.id}>
                         {style.title}
                     </option>
-                })}
+                ))}
             </select>
             <br/>
             <button onClick={applyEffect}>Aplica Efecto Artístico</button>
             {loading && <p className='loading-text'>Loading...</p>}
+            <p>Solo disponible hasta el 11 de Agosto</p>
             <div className='image-container'>
                 {uploadedImage && <img className='uploaded-image' src={uploadedImage} alt='Subida con efecto artístico' />}
+                {/* TODO: Agregar botón de "descargar imagen" */}
             </div>
         </div>
     );
