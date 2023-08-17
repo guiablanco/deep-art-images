@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = 'twNFmxtqJcNzmbm6xO2f93MnaAIRxZsrQM6BXE00';
+const API_KEY = 'WyRi3b8sNN5c1xHR1wl7V63JkqNlTCC15H7xKDeW';
 const API_ENDPOINT =  'https://api.deeparteffects.com/v1/noauth';
 
 export const getStyles = () => {
