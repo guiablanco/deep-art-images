@@ -106,7 +106,7 @@ const ArtEffects = () => {
             <br/>
             <button onClick={applyEffect}>Aplica Efecto Artístico</button>
             {loading && <p className='loading-text'>Loading...</p>}
-            <p>Solo disponible hasta el 31 de Agosto</p>
+            <p>Solo disponible hasta el 21 de Septiembre</p>
             <div className='image-container'>
                 {uploadedImage && <img className='uploaded-image' src={uploadedImage} alt='Subida con efecto artístico' />}
                 {/* TODO: Agregar botón de "descargar imagen" */}
